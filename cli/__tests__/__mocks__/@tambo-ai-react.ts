@@ -5,17 +5,9 @@
 
 import { jest } from "@jest/globals";
 import type { Mock } from "jest-mock";
+import { GenerationStage } from "../../../react-sdk/src/model/generate-component-response";
 
-export enum GenerationStage {
-  IDLE = "IDLE",
-  CHOOSING_COMPONENT = "CHOOSING_COMPONENT",
-  FETCHING_CONTEXT = "FETCHING_CONTEXT",
-  HYDRATING_COMPONENT = "HYDRATING_COMPONENT",
-  STREAMING_RESPONSE = "STREAMING_RESPONSE",
-  COMPLETE = "COMPLETE",
-  ERROR = "ERROR",
-  CANCELLED = "CANCELLED",
-}
+export { GenerationStage }; // Export the enum to be used in the tests
 
 export const useTambo: Mock = jest.fn().mockReturnValue({
   thread: {
